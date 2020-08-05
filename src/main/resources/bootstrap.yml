@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: user
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://192.168.10.79:32221
+        namespace: 5fe0d6e5-b73b-4d96-bdf1-5340bd70b752
+
+
+#  redis:
+#    cluster:
+#      nodes: 127.0.0.1:6391, 127.0.0.1:6392, 127.0.0.1:6393, 127.0.0.1:6394, 127.0.0.1:6395, 127.0.0.1:6396
+#      max-redirects: 3
+#
+#    lettuce:
+#      pool:
+#        max-active: 16
+#        max-idle: 8
+#        min-idle: 8
+#
+#    timeout: 6000
+#
+#  session:
+#    store-type: redis
+
+
+
+server:
+  port: 8081
+
+
+#eureka.client.serviceUrl.defaultZone=http://localhost:9001/eureka/
+#spring.cloud.config.discovery.enabled=true
+#spring.cloud.config.discovery.service-id=config-server
+#spring.cloud.config.profile=dev
+#spring.cloud.config.label=master
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:9001/eureka/
+#    healthcheck:
+#      enabled: true
+
+
+
+
